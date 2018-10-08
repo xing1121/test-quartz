@@ -29,7 +29,7 @@
 	<!-- 定义触发器 -->
 	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="myJobDetail" />
-		<!-- 每一分钟执行一次 -->
+		<!-- 每5s执行一次 -->
 		<property name="cronExpression" value="0/5 * * * * ?" />
 	</bean>
 	
@@ -37,7 +37,7 @@
 	<!-- 演示：一个job可以有多个trigger；但是一个trigger只能触发一个job -->
 	<bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="myJobDetail" />
-		<!-- 每一分钟执行一次 -->
+		<!-- 每1min执行一次 -->
 		<property name="cronExpression" value="0 */1 * * * ?" />
 	</bean>
 	

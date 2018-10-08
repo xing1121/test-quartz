@@ -15,7 +15,7 @@
  * 
  */
  
-package com.sf.quartz.example;
+package com.sf.wdx.example;
 
 import java.util.Date;
 

@@ -1,15 +1,26 @@
-package com.sf.quartz;
+package com.sf.wdx.test;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.sf.component.SayComponent;
+import com.sf.wdx.component.SayComponent;
 
+/**
+ * 描述：自定义任务
+ * @author 80002888
+ * @date   2018年10月8日
+ */
 public class MyJob implements Job {
     
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		new ClassPathXmlApplicationContext("classpath:spring-quartz.xml");
+	}
+	
 	@Autowired
 	private SayComponent sayComponent;
 	

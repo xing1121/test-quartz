@@ -1,4 +1,4 @@
-package com.sf.component;
+package com.sf.wdx.component;
 
 import org.springframework.stereotype.Component;
 
